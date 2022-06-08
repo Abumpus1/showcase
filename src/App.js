@@ -2,6 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  fetch("https://www.cheapshark.com/api/1.0/deals?storeID=1&upperPrice=2").then(response => {
+    return response.json()
+  })
+  .then(data => console.log(data))
   return (
     <div className="App">
       <header className="App-header">
