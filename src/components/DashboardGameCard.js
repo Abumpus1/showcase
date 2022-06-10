@@ -1,10 +1,10 @@
 import React from "react";
 import "../styles/DashboardGameCard.css";
 
-function DashboardGameCard() {
+function DashboardGameCard({ game }) {
   return (
     <div className="dash-game-card">
-      <h4>Game Tile Here</h4>
+      <h4>{game.title}</h4>
       <div className="dash-price-box">
         <p>-$30-</p>
         <p>$3</p>

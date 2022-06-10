@@ -15,8 +15,8 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <h2 className="dash-title">Top Deals by Store</h2>
-      <Dashboard stores={stores} />
+      <h2 className="dash-title">Top Deals by Store ({stores.length})</h2>
+      {!!stores.length ? <Dashboard stores={stores} /> : <h2>Loading...</h2>}
     </div>
   );
 }

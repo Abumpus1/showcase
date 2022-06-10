@@ -7,9 +7,10 @@
 
 button {
   background: rgb(60, 60, 71);
+  border: 0;
   min-width: 80px;
   min-height: 30px;
-  border-radius: 7px;
+  border-radius: 50px;
 }
 
 body {

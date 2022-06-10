@@ -4,3 +4,9 @@ export const getAllStores = () => {
     return response.json()
   })
 }
+
+export const getStoreDeals = (storeID) => {
+  return fetch(`https://www.cheapshark.com/api/1.0/deals?storeID=${storeID}&pageSize=5`).then(response => {
+    return response.json()
+  })
+}
