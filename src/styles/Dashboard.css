@@ -1,9 +1,22 @@
 .dashboard {
   width: 70%;
+  max-width: 1200px;
   display: grid;
   padding: 20px;
   border-radius: 20px;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   background-color: rgb(80, 81, 98);
+}
+
+@media screen and (max-width:1120px) {
+  .dashboard {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width:840px) {
+  .dashboard {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

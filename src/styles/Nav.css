@@ -19,3 +19,18 @@ h1 {
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width:500px) {
+  nav {
+    height: 15vh;
+  }
+  .nav-buttons-box {
+    flex-direction: column;
+    height: 80%;
+    width: 85px;
+  }
+
+  .nav-buttons-box > button {
+    height: 40px;
+  }
+}
