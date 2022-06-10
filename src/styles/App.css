@@ -15,6 +15,7 @@ button {
 body {
   background-color: rgb(52, 51, 63);
   overflow: hidden;
+  overflow-y: auto;
   width: 100vw;
   height: 100vh;
 }
@@ -22,5 +23,12 @@ body {
 .App {
   width: 100%;
   height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dash-title {
+  margin: 3vh 0;
 }
 

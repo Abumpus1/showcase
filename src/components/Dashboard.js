@@ -9,6 +9,8 @@ function Dashboard() {
       <StoreDealBox />
       <StoreDealBox />
       <StoreDealBox />
+      <StoreDealBox />
+      <StoreDealBox />
     </div>
   )
 }

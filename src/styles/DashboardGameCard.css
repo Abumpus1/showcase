@@ -1,0 +1,13 @@
+.dash-game-card {
+  background-color: rgb(216, 133, 0);
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+
+.dash-price-box {
+  display: flex;
+  justify-content: space-between;
+  width: 18%;
+}

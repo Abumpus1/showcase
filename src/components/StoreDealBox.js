@@ -5,7 +5,7 @@ import DashboardGameCard from "./DashboardGameCard";
 function StoreDealBox() {
   return (
     <div className="store-deal-box">
-      Hello Deal Box
+      <h3>Store Name Here</h3>
       <DashboardGameCard />
       <DashboardGameCard />
       <DashboardGameCard />

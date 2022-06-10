@@ -5,14 +5,16 @@ nav {
   justify-content: space-between;
   align-items: center;
   background: black;
+  position: sticky;
+  top: 0;
 }
 
 h1 {
-  margin-left: 2vw;
+  margin-left: 2.5vw;
 }
 
 .nav-buttons-box {
-  margin-right: 2vw;
+  margin-right: 2.5vw;
   width: 200px;
   display: flex;
   justify-content: space-between;
