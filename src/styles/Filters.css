@@ -4,3 +4,18 @@
   padding: 10px;
   height: 100px;
 }
+
+.title-search {
+  color: black;
+  height: 30px;
+  width: 300px;
+  border-radius: 50px;
+  border: solid black 2px;
+  text-indent: 12px;
+  font-size: 120%;
+}
+
+.title-search-label {
+  padding-right: 5px;
+  font-size: 120%;
+}
