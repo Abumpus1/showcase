@@ -33,7 +33,7 @@ body {
   align-items: center;
 }
 
-.dash-title {
+.dash-title, .search-title {
   margin: 3vh 0;
 }
 

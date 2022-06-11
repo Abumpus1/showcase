@@ -11,6 +11,7 @@ function App() {
 
   useEffect(() => {
     getAllStores().then(data => setStores(data))
+    .catch(error => console.log(error))
   },[])
 
   return (
@@ -19,6 +20,9 @@ function App() {
       <Route exact path="/">
         <h2 className="dash-title">Top Deals by Store</h2>
         {!!stores.length ? <Dashboard stores={stores} /> : <h2>Loading...</h2>}
+      </Route>
+      <Route path="/search">
+        <h2 className="search-title">Search All Deals</h2>
       </Route>
     </div>
   );

@@ -9,6 +9,7 @@ function StoreDealBox({ store }) {
 
   useEffect(() => {
     getStoreDeals(store.storeID).then(data => setStoreDeals(data))
+    .catch(error => console.log(error))
   },[])
 
   return (
