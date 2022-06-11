@@ -10,7 +10,7 @@ function Dashboard({ stores }) {
       <StoreDealBox store={stores[6]} />
       <StoreDealBox store={stores[24]} />
       <StoreDealBox store={stores[7]} />
-      <StoreDealBox store={stores[12]} />
+      <StoreDealBox store={stores[26]} />
     </div>
   )
 }
