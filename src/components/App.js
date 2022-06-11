@@ -16,7 +16,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Route path="/">
+      <Route exact path="/">
         <h2 className="dash-title">Top Deals by Store</h2>
         {!!stores.length ? <Dashboard stores={stores} /> : <h2>Loading...</h2>}
       </Route>

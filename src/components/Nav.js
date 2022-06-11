@@ -5,10 +5,10 @@ import "../styles/Nav.css";
 function Nav() {
   return (
     <nav>
-      <h1>CREATIVE TITLE WIP</h1>
+      <h1>SaveGame</h1>
       <div className="nav-buttons-box">
-        <NavLink exact to="/">HOME</NavLink>
-        <NavLink to="/search">SEARCH</NavLink>
+        <NavLink className="button" exact to="/">HOME</NavLink>
+        <NavLink className="button" to="/search">SEARCH</NavLink>
       </div>
     </nav>
   )

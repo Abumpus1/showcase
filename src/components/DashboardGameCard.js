@@ -2,7 +2,7 @@ import React from "react";
 import "../styles/DashboardGameCard.css";
 
 function DashboardGameCard({ game }) {
-  // console.log(game.thumb);
+  console.log(game);
   return (
     <div className="dash-game-card">
       <h4 className="dash-game-title">{game.title}</h4>
