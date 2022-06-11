@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import "../styles/Nav.css";
 
 function Nav() {
@@ -6,8 +7,8 @@ function Nav() {
     <nav>
       <h1>CREATIVE TITLE WIP</h1>
       <div className="nav-buttons-box">
-        <button>HOME</button>
-        <button>SEARCH</button>
+        <NavLink exact to="/">HOME</NavLink>
+        <NavLink to="/search">SEARCH</NavLink>
       </div>
     </nav>
   )

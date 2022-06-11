@@ -1,12 +1,15 @@
 nav {
   width: 100vw;
   height: 8vh;
+  min-height: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: black;
   position: sticky;
   top: 0;
+  opacity: 86%;
+  z-index: 2;
 }
 
 h1 {
@@ -20,6 +23,16 @@ h1 {
   justify-content: space-between;
 }
 
+.active {
+  background-color: rgb(114, 196, 255);
+  color: black;
+  border-right: white solid 1px;
+  border-bottom: white solid 1px;
+  border-left: white solid 1px;
+  border-radius: 50px;
+  /* text-decoration: underline; */
+}
+
 @media screen and (max-width:500px) {
   nav {
     height: 15vh;
@@ -30,7 +43,7 @@ h1 {
     width: 85px;
   }
 
-  .nav-buttons-box > button {
+  .nav-buttons-box > a {
     height: 40px;
   }
 }

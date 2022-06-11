@@ -4,10 +4,51 @@
   display: flex;
   justify-content: space-between;
   padding: 5px 10px;
+  height: 42px;
+  /* overflow: hidden; */
+  align-items: center;
+  border-radius: 3px;
+  position: relative;
 }
 
 .dash-price-box {
   display: flex;
   justify-content: space-between;
-  width: 18%;
+  width: 20%;
+  min-width: 120px;
+  padding-left: 10px;
+  align-items: center;
+}
+
+/* 
+.dash-game-title:hover:before {
+  content: url("https://gamersgatep.imgix.net/0/6/d/276387a0ccc7a64ca7cc0bb79cc88f58d9446d60.jpg?auto=&w=");
+  position: absolute;
+  top: 30px;
+  left: -100px;
+  z-index: 3;
+} 
+*/
+
+.dash-game-title {
+  width: 65%;
+  font-size: 92%;
+  text-decoration: underline;
+}
+
+.dash-old-price {
+  font-size: 85%;
+  text-decoration: line-through;
+  color: rgb(211, 211, 211);
+}
+
+.dash-sale-price {
+  background-color: rgb(249, 145, 18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 70px;
+  border-radius: 8px;
+  margin-left: 5px;
 }

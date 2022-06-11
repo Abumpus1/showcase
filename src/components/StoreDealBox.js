@@ -8,18 +8,22 @@ function StoreDealBox({ store }) {
   const [storeDeals, setStoreDeals] = useState([])
 
   useEffect(() => {
-    console.log("store ID:", store.storeID);
     getStoreDeals(store.storeID).then(data => setStoreDeals(data))
   },[])
 
+  // console.log(store);
+
   return (
     <div className="store-deal-box">
-      <h3>{store.storeName}</h3>
-      <DashboardGameCard game={storeDeals[0]} />
-      <DashboardGameCard game={storeDeals[1]} />
-      <DashboardGameCard game={storeDeals[2]} />
-      <DashboardGameCard game={storeDeals[3]} />
-      <DashboardGameCard game={storeDeals[4]} />
+      <img src={`https://www.cheapshark.com${store.images.banner}`} alt={store.storeName}/>
+      {!!storeDeals.length && 
+      <>
+        <DashboardGameCard game={storeDeals[0]} />
+        <DashboardGameCard game={storeDeals[1]} />
+        <DashboardGameCard game={storeDeals[2]} />
+        <DashboardGameCard game={storeDeals[3]} />
+        <DashboardGameCard game={storeDeals[4]} />
+      </>}
     </div>
   )
 }

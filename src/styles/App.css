@@ -5,12 +5,16 @@
   font-family: Calibri, sans-serif;
 }
 
-button {
+button, a {
   background: rgb(60, 60, 71);
   border: 0;
   min-width: 80px;
   min-height: 30px;
   border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
 body {
