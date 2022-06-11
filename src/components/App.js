@@ -4,6 +4,7 @@ import { getAllStores } from "../apiCalls";
 import "../styles/App.css";
 import Dashboard from "./Dashboard";
 import Nav from "./Nav";
+import SearchPage from "./SearchPage";
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
       </Route>
       <Route path="/search">
         <h2 className="search-title">Search All Deals</h2>
+        <SearchPage />
       </Route>
     </div>
   );
