@@ -3,12 +3,27 @@
   display: flex;
   padding: 10px;
   height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+
+.price-limit-box {
+  width: 200px;
+  white-space: nowrap;
 }
 
 .title-search {
   color: black;
   height: 30px;
-  width: 300px;
+  width: 250px;
   border-radius: 50px;
   border: solid black 2px;
   text-indent: 12px;
@@ -19,3 +34,12 @@
   padding-right: 5px;
   font-size: 120%;
 }
+
+.apply-filters-btn {
+  background-color: rgb(114, 196, 255);
+  color: black;
+  border: solid black 2px;
+  width: 100px;
+  height: 40px; 
+}
+
