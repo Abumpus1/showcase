@@ -5,8 +5,7 @@ import SearchResults from "./SearchResults";
 
 function SearchPage() {
   return (
-    <div>
-      SEARCH PAGE MY GUY
+    <div className="search-page">
       <Filters />
       <SearchResults />
     </div>

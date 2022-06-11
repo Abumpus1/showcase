@@ -1,0 +1,6 @@
+.filters {
+  border: dashed black 2px;
+  display: flex;
+  padding: 10px;
+  height: 100px;
+}

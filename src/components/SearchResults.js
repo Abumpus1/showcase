@@ -4,8 +4,7 @@ import SearchGameCard from "./SearchGameCard";
 
 function SearchResults() {
   return (
-    <div>
-      HELLO IT IS I, SEARCH RESULTS
+    <div className="search-results">
       <SearchGameCard />
       <SearchGameCard />
       <SearchGameCard />

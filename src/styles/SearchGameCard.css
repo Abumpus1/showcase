@@ -1,0 +1,15 @@
+.search-game-card {
+  background-color: rgb(127, 140, 167);
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  height: 42px;
+  align-items: center;
+  border-radius: 3px;
+  position: relative;
+}
+
+.search-game-card:hover {
+  background-color: rgb(106, 174, 208);
+}

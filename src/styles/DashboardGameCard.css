@@ -9,6 +9,7 @@
   border-radius: 3px;
   position: relative;
 }
+
 .dash-game-card:hover {
   background-color: rgb(106, 174, 208);
 }

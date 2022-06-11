@@ -3,7 +3,7 @@ import "../styles/SearchGameCard.css";
 
 function SearchGameCard() {
   return (
-    <div>
+    <div className="search-game-card">
       SEARCH GAME CARD BOYO
     </div>
   )

@@ -3,7 +3,7 @@ import "../styles/Filters.css";
 
 function Filters() {
   return (
-    <div>
+    <div className="filters">
       HELLO I AM FILTERS
     </div>
   )
