@@ -5,7 +5,6 @@
   justify-content: space-between;
   padding: 5px 10px;
   height: 42px;
-  /* overflow: hidden; */
   align-items: center;
   border-radius: 3px;
   position: relative;
@@ -18,20 +17,10 @@
   display: flex;
   justify-content: space-between;
   width: 20%;
-  min-width: 120px;
+  min-width: 125px;
   padding-left: 10px;
   align-items: center;
 }
-
-/* 
-.dash-game-title:hover:before {
-  content: url("https://gamersgatep.imgix.net/0/6/d/276387a0ccc7a64ca7cc0bb79cc88f58d9446d60.jpg?auto=&w=");
-  position: absolute;
-  top: 30px;
-  left: -100px;
-  z-index: 3;
-} 
-*/
 
 .dash-game-title {
   width: 60%;
