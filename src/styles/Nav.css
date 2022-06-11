@@ -1,0 +1,48 @@
+nav {
+  width: 100vw;
+  height: 8vh;
+  min-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  position: sticky;
+  top: 0;
+  opacity: 86%;
+  z-index: 2;
+}
+
+h1 {
+  margin-left: 2.5vw;
+}
+
+.nav-buttons-box {
+  margin-right: 2.5vw;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.active {
+  background-color: rgb(114, 196, 255);
+  color: black;
+  border-right: white solid 1px;
+  border-bottom: white solid 1px;
+  border-left: white solid 1px;
+  border-radius: 50px;
+}
+
+@media screen and (max-width:500px) {
+  nav {
+    height: 15vh;
+  }
+  .nav-buttons-box {
+    flex-direction: column;
+    height: 80%;
+    width: 85px;
+  }
+
+  .nav-buttons-box > a {
+    height: 40px;
+  }
+}

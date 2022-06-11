@@ -1,0 +1,51 @@
+.dash-game-card {
+  background-color: rgb(127, 140, 167);
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  height: 42px;
+  align-items: center;
+  border-radius: 3px;
+  position: relative;
+}
+.dash-game-card:hover {
+  background-color: rgb(106, 174, 208);
+}
+
+.dash-price-box {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  min-width: 125px;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.dash-game-title {
+  width: 60%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 92%;
+  position: absolute;
+  top: 35%;
+  left: 10px;
+}
+
+.dash-old-price {
+  font-size: 85%;
+  text-decoration: line-through;
+  color: rgb(211, 211, 211);
+}
+
+.dash-sale-price {
+  background-color: rgb(249, 145, 18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 70px;
+  border-radius: 8px;
+  margin-left: 5px;
+}
