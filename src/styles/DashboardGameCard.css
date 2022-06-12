@@ -14,15 +14,6 @@
   background-color: rgb(106, 174, 208);
 }
 
-.dash-price-box {
-  display: flex;
-  justify-content: space-between;
-  width: 20%;
-  min-width: 125px;
-  padding-left: 10px;
-  align-items: center;
-}
-
 .dash-game-title {
   width: 60%;
   text-overflow: ellipsis;
@@ -32,6 +23,15 @@
   position: absolute;
   top: 35%;
   left: 10px;
+}
+
+.dash-price-box {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  min-width: 125px;
+  padding-left: 10px;
+  align-items: center;
 }
 
 .dash-old-price {

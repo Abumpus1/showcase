@@ -10,6 +10,13 @@ function SearchGameCard() {
         </div>
         <h4>GAME TITLE</h4>
       </div>
+      <div className="game-card-right">
+        <div className="game-price-box">
+          <p className="game-old-price">${"119.99"}</p>
+          <p className="game-sale-price">${"14.99"}</p>
+        </div>
+        <p className="sale-percent">-87%</p>
+      </div>
     </div>
   )
 }
