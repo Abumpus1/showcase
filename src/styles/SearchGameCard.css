@@ -1,0 +1,103 @@
+.search-game-card {
+  background-color: rgb(127, 140, 167);
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+  height: 42px;
+  align-items: center;
+  border-radius: 3px;
+  position: relative;
+}
+
+.search-game-card:hover {
+  background-color: rgb(106, 174, 208);
+}
+
+.game-card-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  min-width: 220px;
+}
+
+.store-icon {
+  margin-right: 10px;
+}
+
+.game-image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+  height: 40px;
+  width: 108px;
+  box-shadow: black 2px 2px 1px;
+  margin-right: 10px;
+}
+
+.game-image {
+  height: 40px;
+  width: auto;
+  max-width: 108px;
+}
+
+.game-card-right {
+  display: flex;
+  align-items: center;
+}
+
+.game-price-box {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  min-width: 125px;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.game-old-price {
+  font-size: 85%;
+  text-decoration: line-through;
+  color: rgb(211, 211, 211);
+}
+
+.game-sale-price {
+  background-color: rgb(249, 145, 18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  width: 70px;
+  border-radius: 8px;
+  margin-left: 5px;
+}
+
+.sale-percent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 37px;
+  margin-left: 15px;
+  font-size: 90%;
+  background-color: green;
+  padding: 3px 6px;
+}
+
+@media screen and (max-width:860px) {
+  .game-image-box {
+    display: none;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .sale-percent {
+    display: none;
+  }
+
+  .game-price-box {
+    flex-direction: column;
+    min-width: 70px;
+  }
+}

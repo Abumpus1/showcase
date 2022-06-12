@@ -2,7 +2,6 @@ import React from "react";
 import "../styles/DashboardGameCard.css";
 
 function DashboardGameCard({ game }) {
-  console.log(game);
   return (
     <div className="dash-game-card">
         <a href={`https://www.cheapshark.com/redirect?dealID=${game.dealID}`} target="_blank">

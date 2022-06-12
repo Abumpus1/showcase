@@ -9,17 +9,9 @@
   border-radius: 3px;
   position: relative;
 }
+
 .dash-game-card:hover {
   background-color: rgb(106, 174, 208);
-}
-
-.dash-price-box {
-  display: flex;
-  justify-content: space-between;
-  width: 20%;
-  min-width: 125px;
-  padding-left: 10px;
-  align-items: center;
 }
 
 .dash-game-title {
@@ -31,6 +23,15 @@
   position: absolute;
   top: 35%;
   left: 10px;
+}
+
+.dash-price-box {
+  display: flex;
+  justify-content: space-between;
+  width: 20%;
+  min-width: 125px;
+  padding-left: 10px;
+  align-items: center;
 }
 
 .dash-old-price {
@@ -48,4 +49,11 @@
   width: 70px;
   border-radius: 8px;
   margin-left: 5px;
+}
+
+@media screen and (max-width:600px) {
+  .dash-price-box {
+    flex-direction: column;
+    min-width: 70px;
+  }
 }

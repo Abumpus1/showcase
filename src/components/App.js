@@ -4,6 +4,7 @@ import { getAllStores } from "../apiCalls";
 import "../styles/App.css";
 import Dashboard from "./Dashboard";
 import Nav from "./Nav";
+import SearchPage from "./SearchPage";
 
 function App() {
 
@@ -11,7 +12,13 @@ function App() {
 
   useEffect(() => {
     getAllStores().then(data => setStores(data))
+    .catch(error => console.log(error))
   },[])
+
+  const findStoreIcon = (storeID) => {
+    const urlPath = stores.find(store => store.storeID === storeID).images.icon
+    return `https://www.cheapshark.com${urlPath}`
+  }
 
   return (
     <div className="App">
@@ -19,6 +26,10 @@ function App() {
       <Route exact path="/">
         <h2 className="dash-title">Top Deals by Store</h2>
         {!!stores.length ? <Dashboard stores={stores} /> : <h2>Loading...</h2>}
+      </Route>
+      <Route path="/search">
+        <h2 className="search-title">Search All Deals</h2>
+        {!!stores.length ? <SearchPage findStoreIcon={findStoreIcon} /> : <h3>Loading...</h3>}
       </Route>
     </div>
   );

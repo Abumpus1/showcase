@@ -9,6 +9,7 @@ function StoreDealBox({ store }) {
 
   useEffect(() => {
     getStoreDeals(store.storeID).then(data => setStoreDeals(data))
+    .catch(error => console.log(error))
   },[])
 
   return (
@@ -23,7 +24,7 @@ function StoreDealBox({ store }) {
           <DashboardGameCard game={storeDeals[3]} />
           <DashboardGameCard game={storeDeals[4]} />
         </> 
-        : <h3>Loading Games...</h3>
+        : <h3>Loading Titles...</h3>
       }
     </div>
   )
