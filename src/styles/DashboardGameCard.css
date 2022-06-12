@@ -50,3 +50,9 @@
   border-radius: 8px;
   margin-left: 5px;
 }
+
+@media screen and (max-width:600px) {
+  .dash-price-box {
+    flex-direction: column;
+  }
+}
