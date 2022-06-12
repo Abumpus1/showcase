@@ -9,6 +9,8 @@ describe('Dashboard', () => {
     cy.intercept("GET", "https://www.cheapshark.com/api/1.0/deals?storeID=25&pageSize=5", { fixture: "store25.json" })
     cy.intercept("GET", "https://www.cheapshark.com/api/1.0/deals?storeID=27&pageSize=5", { fixture: "store27.json" })
 
+    cy.intercept("GET", "https://www.cheapshark.com/api/1.0/deals?pageSize=30", { fixture: "searchDefault.json" })
+
     cy.visit('http://localhost:3000/')
 
   })
@@ -24,7 +26,7 @@ describe('Dashboard', () => {
     cy.contains("Top Deals by Store")
     
     cy.get(".dashboard")
-      .get(".store-deal-box")
+      .children(".store-deal-box")
         .should("have.length", 6)
       .get(".dash-game-card")
         .should("have.length", 30)
@@ -43,5 +45,22 @@ describe('Dashboard', () => {
       .contains("$27.99")
   })
 
-  
+  it("Should be able to navigate between dashboard and search page", () => {
+    cy.get(".active").contains("HOME")
+
+      cy.get("a").eq(1).click()
+      cy.contains("Search All Deals")
+
+    cy.get(".active").contains("SEARCH")
+
+      cy.get("a").eq(0).click()
+      cy.contains("Top Deals by Store")
+
+    cy.get(".active").contains("HOME")
+  })
+
+  it("Each game title should have a link to redirect to a store page", () => {
+    cy.get("h4").eq(0).parent("a")
+      .should("have.attr", "href").should("eq", "https://www.cheapshark.com/redirect?dealID=JgjbtVkgfWGW3AzYrPr6yyqxR2R1FZ3n4F9UrN2ZGJc%3D")
+  })
 })
