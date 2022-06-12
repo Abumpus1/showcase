@@ -4,7 +4,7 @@ import "../styles/SearchPage.css";
 import Filters from "./Filters";
 import SearchResults from "./SearchResults";
 
-function SearchPage() {
+function SearchPage({ findStoreIcon }) {
 
   const [results, setResults] = useState([])
 
@@ -31,7 +31,7 @@ function SearchPage() {
   return (
     <div className="search-page">
       <Filters findGames={findGames} />
-      {!!results.length ? <SearchResults results={results} /> : <p>Loading Titles...</p>}
+      {!!results.length ? <SearchResults findStoreIcon={findStoreIcon} results={results} /> : <p>Loading Titles...</p>}
     </div>
   )
 }

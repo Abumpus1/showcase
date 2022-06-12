@@ -15,7 +15,10 @@ function App() {
     .catch(error => console.log(error))
   },[])
 
-  console.log(stores);
+  const findStoreIcon = (storeID) => {
+    const urlPath = stores.find(store => store.storeID === storeID).images.icon
+    return `https://www.cheapshark.com${urlPath}`
+  }
 
   return (
     <div className="App">
@@ -26,7 +29,7 @@ function App() {
       </Route>
       <Route path="/search">
         <h2 className="search-title">Search All Deals</h2>
-        <SearchPage />
+        {!!stores.length ? <SearchPage findStoreIcon={findStoreIcon} /> : <h3>Loading...</h3>}
       </Route>
     </div>
   );

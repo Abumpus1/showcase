@@ -1,14 +1,14 @@
 import React from "react";
 import "../styles/SearchGameCard.css";
 
-function SearchGameCard({ dealID, normalPrice, salePrice, savings, thumb, title, storeID }) {
+function SearchGameCard({ dealID, normalPrice, salePrice, savings, thumb, title, storeID, findStoreIcon }) {
 
   savings = Math.round(savings)
 
   return (
     <div className="search-game-card">
       <div className="game-card-left">
-        <img className="store-icon" src={`https://www.cheapshark.com/img/stores/icons/${storeID}.png`}/>
+        <img className="store-icon" src={findStoreIcon(storeID)}/>
         <div className="game-image-box">
           <img className="game-image" src={thumb} />
         </div>

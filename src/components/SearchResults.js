@@ -2,11 +2,12 @@ import React from "react";
 import "../styles/SearchResults.css";
 import SearchGameCard from "./SearchGameCard";
 
-function SearchResults({ results }) {
+function SearchResults({ results, findStoreIcon }) {
   const gameCards = results.map(result => {
     return (
       <SearchGameCard
       key={result.dealID}
+      findStoreIcon={findStoreIcon}
       {...result}
       />
     )
