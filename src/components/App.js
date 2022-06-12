@@ -15,6 +15,8 @@ function App() {
     .catch(error => console.log(error))
   },[])
 
+  console.log(stores);
+
   return (
     <div className="App">
       <Nav />

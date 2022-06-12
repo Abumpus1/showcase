@@ -21,6 +21,10 @@
   min-width: 220px;
 }
 
+.store-icon {
+  margin-right: 10px;
+}
+
 .game-image-box {
   display: flex;
   justify-content: center;
@@ -74,7 +78,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35px;
+  width: 37px;
   margin-left: 15px;
   font-size: 90%;
   background-color: green;

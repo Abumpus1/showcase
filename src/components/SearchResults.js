@@ -3,7 +3,6 @@ import "../styles/SearchResults.css";
 import SearchGameCard from "./SearchGameCard";
 
 function SearchResults({ results }) {
-console.log(results[0]);
   const gameCards = results.map(result => {
     return (
       <SearchGameCard

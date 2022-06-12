@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { getDeals } from "../apiCalls";
 import "../styles/SearchPage.css";
 import Filters from "./Filters";
@@ -11,19 +11,22 @@ function SearchPage() {
   const findGames = (filterOptions) => {
     let urlData = ""
     
-    if (filterOptions.title) {
+    if (filterOptions && filterOptions.title) {
       urlData += `title=${filterOptions.title}&`
     }
-    if (filterOptions.priceLimit < 50) {
+    if (filterOptions && filterOptions.priceLimit < 50) {
       urlData += `upperPrice=${filterOptions.priceLimit}&`
     }
 
     getDeals(urlData).then(data => {
       setResults(data)
-      console.log(data)
     })
     .catch(error => console.log(error))
   }
+
+  useEffect(() => {
+    findGames()
+  },[])
 
   return (
     <div className="search-page">

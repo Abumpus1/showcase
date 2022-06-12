@@ -8,7 +8,7 @@ function SearchGameCard({ dealID, normalPrice, salePrice, savings, thumb, title,
   return (
     <div className="search-game-card">
       <div className="game-card-left">
-        <img src=""/>
+        <img className="store-icon" src={`https://www.cheapshark.com/img/stores/icons/${storeID}.png`}/>
         <div className="game-image-box">
           <img className="game-image" src={thumb} />
         </div>
@@ -21,7 +21,7 @@ function SearchGameCard({ dealID, normalPrice, salePrice, savings, thumb, title,
           <p className="game-old-price">${normalPrice}</p>
           <p className="game-sale-price">${salePrice}</p>
         </div>
-        <p className="sale-percent">{savings}%</p>
+        <p className="sale-percent">-{savings}%</p>
       </div>
     </div>
   )
