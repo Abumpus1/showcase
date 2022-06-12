@@ -11,6 +11,10 @@ function SearchResults() {
       <SearchGameCard />
       <SearchGameCard />
       <SearchGameCard />
+      <SearchGameCard />
+      <SearchGameCard />
+      <SearchGameCard />
+      <SearchGameCard />
     </div>
   )
 }

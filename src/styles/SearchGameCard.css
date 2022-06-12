@@ -13,3 +13,27 @@
 .search-game-card:hover {
   background-color: rgb(106, 174, 208);
 }
+
+.game-card-left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 220px;
+}
+
+.game-image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  overflow: hidden;
+  height: 40px;
+  width: 108px;
+  box-shadow: black 2px 2px 1px;
+}
+
+.game-image {
+  height: 40px;
+  width: auto;
+  max-width: 108px;
+}
