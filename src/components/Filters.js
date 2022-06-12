@@ -28,7 +28,7 @@ function Filters({ findGames }) {
         </div>
         <div className="price-limit-box">
           <p>Price Limit: {displayMaxPrice()}</p>
-          <input type="range" min="1" max="50" value={maxPrice} onChange={event => setMaxPrice(event.target.value)}/>
+          <input className="price-slider" type="range" min="1" max="50" value={maxPrice} onChange={event => setMaxPrice(event.target.value)}/>
         </div>
       </div>
       <button className="apply-filters-btn">APPLY</button>

@@ -20,6 +20,10 @@
   white-space: nowrap;
 }
 
+.price-slider {
+  width: 100%;
+}
+
 .title-search {
   color: black;
   height: 30px;

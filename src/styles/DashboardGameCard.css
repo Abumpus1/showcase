@@ -54,5 +54,6 @@
 @media screen and (max-width:600px) {
   .dash-price-box {
     flex-direction: column;
+    min-width: 70px;
   }
 }
