@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "../styles/Filters.css";
 
-function Filters() {
+function Filters({ findGames }) {
 
   const [searchInput, setSearchInput] = useState("")
   const [maxPrice, setMaxPrice] = useState("50")
@@ -12,6 +12,11 @@ function Filters() {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    let filterOptions = {
+      title: searchInput,
+      priceLimit: maxPrice
+    }
+    findGames(filterOptions)
   }
 
   return (
