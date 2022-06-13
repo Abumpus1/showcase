@@ -19,6 +19,8 @@ function SearchPage({ findStoreIcon }) {
       urlData += `upperPrice=${filterOptions.priceLimit}&`
     }
 
+    setLoading(true)
+    
     getDeals(urlData).then(data => {
       setResults(data)
       setLoading(false)
