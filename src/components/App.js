@@ -19,21 +19,23 @@ function App() {
     const urlPath = stores.find(store => store.storeID === storeID).images.icon
     return `https://www.cheapshark.com${urlPath}`
   }
-  
+
   return (
     <div className="App">
       <Nav />
       <Switch>
         <Route exact path="/">
           <h2 className="dash-title">Top Deals by Store</h2>
-          {!!stores.length ? <Dashboard 
+          {!!stores.length ? 
+          <Dashboard 
             steam={stores[0]}
             humble={stores[10]}
             gog={stores[6]}
             epic={stores[24]}
             origin={stores[7]}
             gamesPlanet={stores[26]}
-           /> : <h2>Loading...</h2>}
+           /> 
+           : <h2>Loading...</h2>}
         </Route>
         <Route path="/search">
           <h2 className="search-title">Search All Deals</h2>
