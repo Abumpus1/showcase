@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# SaveGame
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Deployed
+Via [Heroku](https://save-game-ui.herokuapp.com/)
 
-## Available Scripts
+#### Getting Started
+1. Clone down this repo
 
-In the project directory, you can run:
+2. Cd into the directory from your terminal and install the project dependencies:
+- Run `npm install` or `npm i` in the terminal
 
-### `npm start`
+3. To see the web app:
+- Run `npm start` in the terminal
+- Press `ctrl/cmd + c` to exit
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+4. Copy the local host address from your terminal and add to your web browser to see the web app
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Table of Contents
+- [About the Project](#about-the-project)
+- [Contributors](#contributors)
+- [Technologies Used](#technologies-used)
+- [Instructions on Use](#instructions-on-use)
+- [Challenges and Wins](#challenges-and-wins)
+- [Future Additions](#future-additions)
+- [Wire Frames](#wireframes-via-figma)
 
-### `npm test`
+#### About the Project
+**SaveGame** is a project designed to provide to users the best available deals for games online.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+This was part of a Turing School of Software & Design solo project with the learning goals to successfully implement React, React Router, E2E testing via Cypress, and fetch calls to an API of our choice, while also creating an app that is responsive to desktop or mobile.
 
-### `npm run build`
+#### Contributors
+ - [Alex Bumpus](https://github.com/Abumpus1)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Technologies Used
+- React
+- Javascript
+- HTML
+- CSS
+- React Router v.5
+- React PropTypes checking
+- Cypress 
+- [CheapShark API](https://apidocs.cheapshark.com/) for game deals data
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Instructions on Use
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+**_Dashboard_**
 
-### `npm run eject`
+When a user visits SaveGame, they will be shown the top deals on 6 selected stores, and if a user clicks on a game title on the dashboard or the Search page, it will redirect them to the store page for that game.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Dashboard-view](https://user-images.githubusercontent.com/3982238/173272413-e18de7dd-f031-4d14-8ab8-091b1aca81cd.gif)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+**_Search Page_**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+User is able to view all game deals, search for specific titles, and set a price limit on what gets displayed.
 
-## Learn More
+![Search-page](https://user-images.githubusercontent.com/3982238/173272441-c633af62-f150-48e4-9876-6f4c40ab7792.gif)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+**_Responsive on Mobile_**
 
-### Code Splitting
+![MobileResponsive](https://user-images.githubusercontent.com/3982238/173272327-d829a6c8-7d36-45c0-b44a-21ff3047c67a.gif)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+### Challenges and Wins
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+##### Challenges
+- Finding an API that had good documentation that I was interested in, and learning how to best implement it.
 
-### Making a Progressive Web App
+##### Wins
+- Learning to add responsiveness to my application, the payoff is vastly bigger than the effort required, which turned out to be less effort (in most cases) than expected.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Future Additions
+- Allow for infinite scrolling on search page
+- Allow user to have better filtering options, such as sorting by store or having a minimum price
 
-### Advanced Configuration
+#### Wireframes via Figma
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+<img width="834" alt="Screen Shot 2022-06-12 at 9 21 42 PM" src="https://user-images.githubusercontent.com/3982238/173273725-e6c91f0a-c841-47aa-b4a5-eef0a5419818.png">
 
-### Deployment
+<img width="849" alt="Screen Shot 2022-06-12 at 9 21 58 PM" src="https://user-images.githubusercontent.com/3982238/173273766-af10e66e-5551-4698-b1ce-f86b9a39f22c.png">
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Image Attributions
+[FlatIcon](https://www.flaticon.com/premium-icon/disk_2493389?term=floppy%20disk&related_id=2493389)

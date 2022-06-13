@@ -17,7 +17,8 @@ describe('Dashboard', () => {
 
   it('User should be able to view dashboard', () => {
     cy.get("nav")
-      .contains("SaveGame")
+      .get("img").should("have.attr", "alt").should("eq", "Save Game icon")
+    cy.contains("SaveGame")
       .get("a")
         .eq(0).contains("HOME")
       .get("a")
