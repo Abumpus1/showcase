@@ -3,10 +3,13 @@ import { getDeals } from "../apiCalls";
 import "../styles/SearchPage.css";
 import Filters from "./Filters";
 import SearchResults from "./SearchResults";
+import { cleanGames } from "../utils"
+import PropTypes from "prop-types";
 
 function SearchPage({ findStoreIcon }) {
 
   const [results, setResults] = useState([])
+  const [loading, setLoading] = useState(true)
 
   const findGames = (filterOptions) => {
     let urlData = ""
@@ -18,8 +21,12 @@ function SearchPage({ findStoreIcon }) {
       urlData += `upperPrice=${filterOptions.priceLimit}&`
     }
 
+    setLoading(true)
+    
     getDeals(urlData).then(data => {
-      setResults(data)
+      const cleanData = cleanGames(data)
+      setResults(cleanData)
+      setLoading(false)
     })
     .catch(error => console.log(error))
   }
@@ -31,9 +38,13 @@ function SearchPage({ findStoreIcon }) {
   return (
     <div className="search-page">
       <Filters findGames={findGames} />
-      {!!results.length ? <SearchResults findStoreIcon={findStoreIcon} results={results} /> : <p>Loading Titles...</p>}
+      {!loading ? <SearchResults findStoreIcon={findStoreIcon} results={results} /> : <p>Loading Titles...</p>}
     </div>
   )
 }
 
 export default SearchPage;
+
+SearchPage.propTypes = {
+  findStoreIcon: PropTypes.func
+}

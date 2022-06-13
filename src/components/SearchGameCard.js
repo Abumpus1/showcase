@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/SearchGameCard.css";
+import PropTypes from "prop-types";
 
 function SearchGameCard({ dealID, normalPrice, salePrice, savings, thumb, title, storeID, findStoreIcon }) {
 
@@ -28,3 +29,14 @@ function SearchGameCard({ dealID, normalPrice, salePrice, savings, thumb, title,
 }
 
 export default SearchGameCard;
+
+SearchGameCard.propTypes = {
+  dealID: PropTypes.string, 
+  normalPrice: PropTypes.string, 
+  salePrice: PropTypes.string, 
+  savings: PropTypes.string, 
+  thumb: PropTypes.string, 
+  title: PropTypes.string, 
+  storeID: PropTypes.string, 
+  findStoreIcon: PropTypes.func
+}

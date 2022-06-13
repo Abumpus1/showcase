@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../styles/Filters.css";
+import PropTypes from "prop-types";
 
 function Filters({ findGames }) {
 
@@ -37,3 +38,7 @@ function Filters({ findGames }) {
 }
 
 export default Filters;
+
+Filters.propTypes = {
+  findGames: PropTypes.func
+}

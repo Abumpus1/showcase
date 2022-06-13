@@ -2,13 +2,18 @@ import React, { useEffect, useState } from "react";
 import { getStoreDeals } from "../apiCalls";
 import "../styles/StoreDealBox.css";
 import DashboardGameCard from "./DashboardGameCard";
+import { cleanDashGames } from "../utils"
+import PropTypes from "prop-types";
 
 function StoreDealBox({ store }) {
 
   const [storeDeals, setStoreDeals] = useState([])
 
   useEffect(() => {
-    getStoreDeals(store.storeID).then(data => setStoreDeals(data))
+    getStoreDeals(store.storeID).then(data => {
+      const cleanData = cleanDashGames(data)
+      setStoreDeals(cleanData)
+    })
     .catch(error => console.log(error))
   },[])
 
@@ -18,11 +23,11 @@ function StoreDealBox({ store }) {
       {
         !!storeDeals.length ? 
         <>
-          <DashboardGameCard game={storeDeals[0]} />
-          <DashboardGameCard game={storeDeals[1]} />
-          <DashboardGameCard game={storeDeals[2]} />
-          <DashboardGameCard game={storeDeals[3]} />
-          <DashboardGameCard game={storeDeals[4]} />
+          <DashboardGameCard {...storeDeals[0]} />
+          <DashboardGameCard {...storeDeals[1]} />
+          <DashboardGameCard {...storeDeals[2]} />
+          <DashboardGameCard {...storeDeals[3]} />
+          <DashboardGameCard {...storeDeals[4]} />
         </> 
         : <h3>Loading Titles...</h3>
       }
@@ -31,3 +36,7 @@ function StoreDealBox({ store }) {
 }
 
 export default StoreDealBox;
+
+StoreDealBox.propTypes = {
+  store: PropTypes.object
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { getAllStores } from "../apiCalls";
 import "../styles/App.css";
 import Dashboard from "./Dashboard";
@@ -23,14 +23,28 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Route exact path="/">
-        <h2 className="dash-title">Top Deals by Store</h2>
-        {!!stores.length ? <Dashboard stores={stores} /> : <h2>Loading...</h2>}
-      </Route>
-      <Route path="/search">
-        <h2 className="search-title">Search All Deals</h2>
-        {!!stores.length ? <SearchPage findStoreIcon={findStoreIcon} /> : <h3>Loading...</h3>}
-      </Route>
+      <Switch>
+        <Route exact path="/">
+          <h2 className="dash-title">Top Deals by Store</h2>
+          {!!stores.length ? 
+          <Dashboard 
+            steam={stores[0]}
+            humble={stores[10]}
+            gog={stores[6]}
+            epic={stores[24]}
+            origin={stores[7]}
+            gamesPlanet={stores[26]}
+           /> 
+           : <h2>Loading...</h2>}
+        </Route>
+        <Route path="/search">
+          <h2 className="search-title">Search All Deals</h2>
+          {!!stores.length ? <SearchPage findStoreIcon={findStoreIcon} /> : <h3>Loading...</h3>}
+        </Route>
+        <Route path="*">
+          <h3 className="bad-url-text">Error 404, Page not found.</h3>
+        </Route>
+      </Switch>
     </div>
   );
 }
