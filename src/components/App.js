@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { Switch } from "react-router-dom";
-import { Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import { getAllStores } from "../apiCalls";
 import "../styles/App.css";
 import Dashboard from "./Dashboard";

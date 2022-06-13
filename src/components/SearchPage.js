@@ -3,6 +3,7 @@ import { getDeals } from "../apiCalls";
 import "../styles/SearchPage.css";
 import Filters from "./Filters";
 import SearchResults from "./SearchResults";
+import { cleanGames } from "../utils"
 
 function SearchPage({ findStoreIcon }) {
 
@@ -22,7 +23,8 @@ function SearchPage({ findStoreIcon }) {
     setLoading(true)
     
     getDeals(urlData).then(data => {
-      setResults(data)
+      const cleanData = cleanGames(data)
+      setResults(cleanData)
       setLoading(false)
     })
     .catch(error => console.log(error))
