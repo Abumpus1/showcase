@@ -7,6 +7,7 @@ import SearchResults from "./SearchResults";
 function SearchPage({ findStoreIcon }) {
 
   const [results, setResults] = useState([])
+  const [loading, setLoading] = useState(true)
 
   const findGames = (filterOptions) => {
     let urlData = ""
@@ -20,6 +21,7 @@ function SearchPage({ findStoreIcon }) {
 
     getDeals(urlData).then(data => {
       setResults(data)
+      setLoading(false)
     })
     .catch(error => console.log(error))
   }
@@ -31,7 +33,7 @@ function SearchPage({ findStoreIcon }) {
   return (
     <div className="search-page">
       <Filters findGames={findGames} />
-      {!!results.length ? <SearchResults findStoreIcon={findStoreIcon} results={results} /> : <p>Loading Titles...</p>}
+      {!loading ? <SearchResults findStoreIcon={findStoreIcon} results={results} /> : <p>Loading Titles...</p>}
     </div>
   )
 }

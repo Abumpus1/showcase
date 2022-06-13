@@ -5,8 +5,6 @@ import DashboardGameCard from "./DashboardGameCard";
 
 function StoreDealBox({ store }) {
 
-  console.log(store.storeID)
-
   const [storeDeals, setStoreDeals] = useState([])
 
   useEffect(() => {

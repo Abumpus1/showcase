@@ -15,7 +15,7 @@ function SearchResults({ results, findStoreIcon }) {
 
   return (
     <div className="search-results">
-      {gameCards}
+      {gameCards.length > 0 ? gameCards : <h3>No results found! Please consider adjusting your search filters.</h3>}
     </div>
   )
 }
