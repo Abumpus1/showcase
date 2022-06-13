@@ -63,4 +63,10 @@ describe('Dashboard', () => {
     cy.get("h4").eq(0).parent("a")
       .should("have.attr", "href").should("eq", "https://www.cheapshark.com/redirect?dealID=JgjbtVkgfWGW3AzYrPr6yyqxR2R1FZ3n4F9UrN2ZGJc%3D")
   })
+
+  it("Should see a 404 page on a bad url", () => {
+    cy.visit("http://localhost:3000/fake/url/path")
+
+    cy.contains("Error 404, Page not found.")
+  })
 })
