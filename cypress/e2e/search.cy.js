@@ -3,6 +3,9 @@ describe('Search', () => {
     cy.intercept("GET", "https://www.cheapshark.com/api/1.0/stores", { fixture: "allStores.json" })
 
     cy.intercept("GET", "https://www.cheapshark.com/api/1.0/deals?pageSize=30", { fixture: "searchDefault.json" })
+    cy.intercept("GET", "https://www.cheapshark.com/api/1.0/deals?title=witcher&pageSize=30", { fixture: "searchTitle.json" })
+    cy.intercept("GET", "https://www.cheapshark.com/api/1.0/deals?upperPrice=10&pageSize=30", { fixture: "searchPrice.json" })
+    cy.intercept("GET", "https://www.cheapshark.com/api/1.0/deals?title=xcom&upperPrice=10&pageSize=30", { fixture: "searchBoth.json" })
     
     cy.visit('http://localhost:3000/search')
   })
