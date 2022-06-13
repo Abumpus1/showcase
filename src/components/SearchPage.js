@@ -4,6 +4,7 @@ import "../styles/SearchPage.css";
 import Filters from "./Filters";
 import SearchResults from "./SearchResults";
 import { cleanGames } from "../utils"
+import PropTypes from "prop-types";
 
 function SearchPage({ findStoreIcon }) {
 
@@ -43,3 +44,7 @@ function SearchPage({ findStoreIcon }) {
 }
 
 export default SearchPage;
+
+SearchPage.propTypes = {
+  findStoreIcon: PropTypes.func
+}

@@ -3,6 +3,7 @@ import { getStoreDeals } from "../apiCalls";
 import "../styles/StoreDealBox.css";
 import DashboardGameCard from "./DashboardGameCard";
 import { cleanDashGames } from "../utils"
+import PropTypes from "prop-types";
 
 function StoreDealBox({ store }) {
 
@@ -35,3 +36,7 @@ function StoreDealBox({ store }) {
 }
 
 export default StoreDealBox;
+
+StoreDealBox.propTypes = {
+  store: PropTypes.object
+}

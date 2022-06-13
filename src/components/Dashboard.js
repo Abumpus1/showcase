@@ -1,6 +1,7 @@
 import React from "react";
 import StoreDealBox from "./StoreDealBox";
 import "../styles/Dashboard.css";
+import PropTypes from "prop-types";
 
 function Dashboard({ stores }) {
   return (
@@ -16,3 +17,7 @@ function Dashboard({ stores }) {
 }
 
 export default Dashboard;
+
+Dashboard.propTypes = {
+  stores: PropTypes.array
+}

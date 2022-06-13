@@ -1,6 +1,7 @@
 import React from "react";
 import "../styles/SearchResults.css";
 import SearchGameCard from "./SearchGameCard";
+import PropTypes from "prop-types";
 
 function SearchResults({ results, findStoreIcon }) {
   const gameCards = results.map(result => {
@@ -21,3 +22,8 @@ function SearchResults({ results, findStoreIcon }) {
 }
 
 export default SearchResults;
+
+SearchResults.propTypes = {
+  results: PropTypes.array,
+  findStoreIcon: PropTypes.func
+}

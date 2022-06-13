@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/DashboardGameCard.css";
+import PropTypes from "prop-types";
 
 function DashboardGameCard({ title, dealID, normalPrice, salePrice }) {
   return (
@@ -16,3 +17,10 @@ function DashboardGameCard({ title, dealID, normalPrice, salePrice }) {
 }
 
 export default DashboardGameCard;
+
+DashboardGameCard.propTypes = {
+  title: PropTypes.string,
+  dealID: PropTypes.string,
+  normalPrice: PropTypes.string,
+  salePrice: PropTypes.string
+}
