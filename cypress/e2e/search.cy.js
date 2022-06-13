@@ -90,4 +90,9 @@ describe('Search', () => {
     cy.get(".title-search").type("fakeGameTitle").type("{enter}")
     cy.contains("No results found! Please consider adjusting your search filters.")
   })
+
+  it("Each game title should have a link to redirect to a store page", () => {
+    cy.get("h4").eq(0).parent("a")
+      .should("have.attr", "href").should("eq", "https://www.cheapshark.com/redirect?dealID=Mk1WSOg1ntccgtlrf0BzEclnjbz2lJC7D0DRrTmf2dU%3D")
+  })
 })
