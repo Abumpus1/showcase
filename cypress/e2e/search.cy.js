@@ -38,6 +38,22 @@ describe('Search', () => {
   })
 
   it("Should be able to search by game title", () => {
+    cy.get(".title-search").type("witcher").type("{enter}")
+
+    cy.get(".search-game-card").should("have.length", 5)
+    
+    cy.get(".store-icon").eq(0)
+      .should("have.attr", "src").should("eq", "https://www.cheapshark.com/img/stores/icons/10.png")
+    cy.get(".game-image").eq(0)
+      .should("have.attr", "src").should("eq", "https://cdn.cloudflare.steamstatic.com/steam/apps/20920/capsule_sm_120.jpg?t=1646335562")
+    cy.get(".search-game-card").eq(0)
+      .contains("The Witcher 2: Assassins of Kings Enhanced Edition")
+    cy.get(".game-old-price").eq(0)
+      .contains("$19.99")
+    cy.get(".game-sale-price").eq(0)
+      .contains("$2.99")
+    cy.get(".sale-percent").eq(0)
+      .contains("-85%")
 
   })
 
