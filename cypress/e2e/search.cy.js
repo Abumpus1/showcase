@@ -4,6 +4,8 @@ describe('Search', () => {
 
     cy.intercept("GET", "https://www.cheapshark.com/api/1.0/deals?pageSize=30", { fixture: "searchDefault.json" })
     cy.intercept("GET", "https://www.cheapshark.com/api/1.0/deals?title=witcher&pageSize=30", { fixture: "searchTitle.json" })
+    cy.intercept("GET", "https://www.cheapshark.com/api/1.0/deals?title=fakeGameTitle&pageSize=30", { body: [] })
+    
     cy.intercept("GET", "https://www.cheapshark.com/api/1.0/deals?upperPrice=10&pageSize=30", { fixture: "searchPrice.json" })
     cy.intercept("GET", "https://www.cheapshark.com/api/1.0/deals?title=xcom&upperPrice=10&pageSize=30", { fixture: "searchBoth.json" })
     
@@ -57,11 +59,35 @@ describe('Search', () => {
 
   })
 
-  it("Should also be able to sort by price limit", () => {
+  it.skip("Should also be able to sort by price limit", () => {
+ /*
+    Ok so, it seems I can't mess with sliders at all in cypress, 
+    there is documentation on how to adjust sliders, does not seem to work for me
+
+    I think the cause is because react holds the value of the slider in state,
+    so when I adjust it via how cypress suggests, it just resets to value of state.
+
+    due to time constrains, I will just leave this for now
+
+    below are a handful of the many variations of things I tried
+ */
+
+
+    // const arrows = '{leftArrow}'.repeat(40); 
+    
+    // cy.get('.price-slider')
+    // .click({ release: false })
+    // .type(arrows)
+
+
+    // cy.get('input[type=range]').invoke('val', 10).trigger('change', {force: true})
+
+    // cy.get(".price-slider").trigger("mousedown").trigger("mousemove", {clientX: 0})
     
   })
 
   it("Should show error message if no results found", () => {
-    
+    cy.get(".title-search").type("fakeGameTitle").type("{enter}")
+    cy.contains("No results found! Please consider adjusting your search filters.")
   })
 })
