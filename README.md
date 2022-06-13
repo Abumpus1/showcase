@@ -82,6 +82,5 @@ User is able to view all game deals, search for specific titles, and set a price
 <img width="849" alt="Screen Shot 2022-06-12 at 9 21 58 PM" src="https://user-images.githubusercontent.com/3982238/173273766-af10e66e-5551-4698-b1ce-f86b9a39f22c.png">
 
 
-
-
-
+### Image Attributions
+[FlatIcon](https://www.flaticon.com/premium-icon/disk_2493389?term=floppy%20disk&related_id=2493389)

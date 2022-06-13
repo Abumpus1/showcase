@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/SearchResults.css";
 import SearchGameCard from "./SearchGameCard";
 import PropTypes from "prop-types";
 
