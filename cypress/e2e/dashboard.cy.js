@@ -20,9 +20,9 @@ describe('Dashboard', () => {
       .get("img").should("have.attr", "alt").should("eq", "Save Game icon")
     cy.contains("SaveGame")
       .get("a")
-        .eq(0).contains("HOME")
+        .eq(1).contains("HOME")
       .get("a")
-        .eq(1).contains("SEARCH")
+        .eq(2).contains("SEARCH")
 
     cy.contains("Top Deals by Store")
     
@@ -49,19 +49,19 @@ describe('Dashboard', () => {
   it("Should be able to navigate between dashboard and search page", () => {
     cy.get(".active").contains("HOME")
 
-      cy.get("a").eq(1).click()
+      cy.get("a").eq(2).click()
       cy.contains("Search All Deals")
 
     cy.get(".active").contains("SEARCH")
 
-      cy.get("a").eq(0).click()
+      cy.get("a").eq(1).click()
       cy.contains("Top Deals by Store")
 
     cy.get(".active").contains("HOME")
   })
 
   it("Each game title should have a link to redirect to a store page", () => {
-    cy.get("h4").eq(0).parent("a")
+    cy.get(".dash-game-card")
       .should("have.attr", "href").should("eq", "https://www.cheapshark.com/redirect?dealID=JgjbtVkgfWGW3AzYrPr6yyqxR2R1FZ3n4F9UrN2ZGJc%3D")
   })
 

@@ -7,15 +7,13 @@ function SearchGameCard({ dealID, normalPrice, salePrice, savings, thumb, title,
   savings = Math.round(savings)
 
   return (
-    <div className="search-game-card">
+    <a href={`https://www.cheapshark.com/redirect?dealID=${dealID}`} target="_blank" className="search-game-card">
       <div className="game-card-left">
         <img className="store-icon" src={findStoreIcon(storeID)}/>
         <div className="game-image-box">
           <img className="game-image" src={thumb} />
         </div>
-        <a href={`https://www.cheapshark.com/redirect?dealID=${dealID}`} target="_blank">
-          <h4>{title}</h4>
-        </a>
+        <h4 className="search-game-title">{title}</h4>
       </div>
       <div className="game-card-right">
         <div className="game-price-box">
@@ -24,7 +22,7 @@ function SearchGameCard({ dealID, normalPrice, salePrice, savings, thumb, title,
         </div>
         <p className="sale-percent">-{savings}%</p>
       </div>
-    </div>
+    </a>
   )
 }
 

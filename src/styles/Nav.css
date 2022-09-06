@@ -18,6 +18,10 @@ nav {
   align-items: center;
 }
 
+.logo-home-button {
+  text-decoration: none;
+}
+
 .logo {
   width: 35px;
   margin-left: 2vw;
@@ -36,7 +40,7 @@ nav {
   justify-content: space-between;
 }
 
-.active {
+.active.button {
   background-color: rgb(114, 196, 255);
   color: black;
   border: solid black 2px;
