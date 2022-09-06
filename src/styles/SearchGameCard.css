@@ -94,14 +94,12 @@
 }
 
 @media screen and (max-width:1360px) {
-
   .search-game-title {
     max-width: 480px;
   }
 }
 
 @media screen and (max-width:920px) {
-
   .search-game-title {
     max-width: 400px;
   }

@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function DashboardGameCard({ title, dealID, normalPrice, salePrice }) {
   return (
     <a href={`https://www.cheapshark.com/redirect?dealID=${dealID}`} target="_blank" className="dash-game-card">
-      <div href={`https://www.cheapshark.com/redirect?dealID=${dealID}`} target="_blank">
+      <div>
         <h4 title={title} className="dash-game-title">{title}</h4>
       </div>
       <div className="dash-price-box">

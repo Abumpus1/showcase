@@ -92,7 +92,7 @@ describe('Search', () => {
   })
 
   it("Each game title should have a link to redirect to a store page", () => {
-    cy.get("h4").eq(0).parent("a")
+    cy.get(".search-game-card")
       .should("have.attr", "href").should("eq", "https://www.cheapshark.com/redirect?dealID=Mk1WSOg1ntccgtlrf0BzEclnjbz2lJC7D0DRrTmf2dU%3D")
   })
 })
